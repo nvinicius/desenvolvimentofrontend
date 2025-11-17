@@ -10,7 +10,6 @@ O objetivo é criar a base estrutural sólida para uma futura plataforma complet
 
 O projeto contém **três páginas HTML obrigatórias**, todas seguindo boas práticas de HTML5 Semântico:
 
-/
 ├── index.html
 
 ├── projetos.html
