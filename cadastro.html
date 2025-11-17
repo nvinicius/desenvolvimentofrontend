@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cadastro / Voluntariado</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header container" role="banner">
+    <div class="brand">
+      <img src="logo.png" alt="Logo">
+      <h1>Cadastro de Voluntário</h1>
+    </div>
+    <nav role="navigation" aria-label="Menu principal">
+      <a href="index.html">Início</a>
+      <a href="projetos.html">Projetos Sociais</a>
+      <a href="cadastro.html" aria-current="page">Cadastro</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card" aria-labelledby="form-title">
+      <h2 id="form-title">Formulário de Cadastro</h2>
+      <form id="cadastroForm" action="#" method="post" novalidate>
+        <fieldset style="border:none;padding:0;margin:0">
+          <legend style="font-weight:700;margin-bottom:12px">Dados pessoais</legend>
+
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="nome">Nome completo</label>
+              <input id="nome" name="nome" type="text" required minlength="3" placeholder="Nome completo">
+            </div>
+
+            <div class="form-row">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" required placeholder="seu@exemplo.com">
+            </div>
+
+            <div class="form-row">
+              <label for="cpf">CPF</label>
+              <!-- pattern simples: 11 dígitos, aceita com ou sem pontos/traço -->
+              <input id="cpf" name="cpf" type="text" inputmode="numeric" required maxlength="14"
+                pattern="^\d{3}\.?\d{3}\.?\d{3}\-?\d{2}$" placeholder="000.000.000-00">
+            </div>
+
+            <div class="form-row">
+              <label for="telefone">Telefone</label>
+              <input id="telefone" name="telefone" type="tel" inputmode="tel" required maxlength="15"
+                pattern="^\(?\d{2}\)?\s?\d{4,5}\-?\d{4}$" placeholder="(11) 9xxxx-xxxx">
+            </div>
+
+            <div class="form-row">
+              <label for="nascimento">Data de nascimento</label>
+              <input id="nascimento" name="nascimento" type="date" required>
+            </div>
+
+            <div class="form-row">
+              <label for="cep">CEP</label>
+              <input id="cep" name="cep" type="text" inputmode="numeric" required maxlength="9"
+                pattern="^\d{5}\-?\d{3}$" placeholder="00000-000">
+            </div>
+
+            <div class="form-row">
+              <label for="endereco">Endereço</label>
+              <input id="endereco" name="endereco" type="text" required placeholder="Rua, número, complemento">
+            </div>
+
+            <div class="form-row">
+              <label for="cidade">Cidade</label>
+              <input id="cidade" name="cidade" type="text" required>
+            </div>
+
+            <div class="form-row">
+              <label for="estado">Estado</label>
+              <select id="estado" name="estado" required>
+                <option value="">Selecione</option>
+                <option value="SP">SP</option>
+                <option value="RJ">RJ</option>
+                <option value="MG">MG</option>
+                <!-- adicionar demais estados -->
+              </select>
+            </div>
+
+            <div style="grid-column:1/-1">
+              <label for="interesse">Interesse / Como quer ajudar</label>
+              <textarea id="interesse" name="interesse" placeholder="Ex.: voluntariado, doação, logística" required></textarea>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button type="submit">Enviar cadastro</button>
+            <button type="reset">Limpar</button>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
