@@ -12,9 +12,13 @@ O projeto contém **três páginas HTML obrigatórias**, todas seguindo boas pr�
 
 /
 ├── index.html
+
 ├── projetos.html
+
 ├── cadastro.html
+
 ├── styles.css
+
 └── scripts.js
 
 ---
@@ -92,4 +96,4 @@ A entrega demonstra domínio dos conceitos:
 
 1. Baixe ou clone este repositório:
    ```bash
-   git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
+   git clone https://github.com/nvinicius/desenvolvimentofrontend.git
