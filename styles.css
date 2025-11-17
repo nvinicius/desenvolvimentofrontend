@@ -1,0 +1,105 @@
+/* styles.css - estilos básicos para as 3 páginas */
+:root{
+  --max-width: 1100px;
+  --accent: #2ea3f2;
+  --bg: #0f0f10;
+  --card: #141415;
+  --text: #eaeaea;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+  padding:24px;
+}
+
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:24px;
+}
+
+/* Cabeçalho */
+.site-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:28px;
+}
+.brand{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.brand img{width:48px;height:48px;border-radius:6px;object-fit:cover}
+.brand h1{font-size:1.25rem;margin:0}
+nav a{
+  color:var(--text);
+  text-decoration:none;
+  margin-left:14px;
+  font-weight:600;
+}
+nav a:focus, nav a:hover{color:var(--accent)}
+
+/* Hero / seções */
+.hero{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:20px;
+}
+h2{margin:0 0 12px 0;font-size:1.35rem}
+p.lead{opacity:0.9; margin:0 0 12px 0}
+
+/* Cards */
+.card{
+  background:var(--card);
+  padding:18px;
+  border-radius:10px;
+  margin-bottom:18px;
+}
+
+/* Form */
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.form-row{margin-bottom:12px}
+label{display:block;font-size:0.9rem;margin-bottom:6px}
+input, select, textarea{
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.06);
+  background:transparent;
+  color:var(--text);
+  font-size:0.95rem;
+}
+textarea{min-height:120px;resize:vertical}
+.actions{
+  display:flex;
+  gap:8px;
+  margin-top:12px;
+}
+
+/* footer */
+.site-footer{
+  margin-top:28px;
+  opacity:0.7;
+  font-size:0.9rem;
+  text-align:center;
+}
+
+/* responsivo */
+@media (max-width:800px){
+  .form-grid{grid-template-columns:1fr}
+  .site-header{flex-direction:column;align-items:flex-start;gap:10px}
+}
